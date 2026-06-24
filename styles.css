@@ -1,0 +1,197 @@
+/* ===================================================================
+   Mosquée de Ganges — feuille de style
+   Palette : vert profond + or, fond crème. Sobre et chaleureux.
+   =================================================================== */
+
+:root {
+  --green-900: #0c3d2e;
+  --green-700: #15604a;
+  --green-500: #1f8268;
+  --gold: #c9a227;
+  --gold-soft: #e6cf7a;
+  --cream: #f7f4ec;
+  --cream-dark: #efe9da;
+  --ink: #1c2521;
+  --muted: #5c6b63;
+  --white: #ffffff;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(12, 61, 46, 0.10);
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+h1, h2, h3 { line-height: 1.2; font-weight: 600; }
+
+a { color: var(--green-700); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- En-tête / navigation ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(247, 244, 236, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cream-dark);
+}
+.nav-bar { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--green-900); }
+.brand:hover { text-decoration: none; }
+.brand-icon { font-size: 1.7rem; color: var(--gold); }
+.brand-logo { height: 46px; width: auto; display: block; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text strong { font-size: 1.05rem; }
+.brand-text small { color: var(--muted); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 26px; }
+.nav-links a { color: var(--ink); font-weight: 500; font-size: .95rem; }
+.nav-links a:hover { color: var(--green-700); text-decoration: none; }
+
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--green-900); border-radius: 2px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background:
+    radial-gradient(900px 400px at 80% -10%, rgba(201,162,39,.18), transparent),
+    linear-gradient(160deg, var(--green-900), var(--green-700));
+  color: #fff;
+  text-align: center;
+  padding: 84px 0 92px;
+  overflow: hidden;
+}
+.hero::after {
+  /* fin motif décoratif en bas */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+  background: repeating-linear-gradient(90deg, var(--gold) 0 18px, transparent 18px 36px);
+  opacity: .6;
+}
+.hero-bismillah { font-family: 'Amiri', serif; font-size: 1.7rem; color: var(--gold); margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); margin-bottom: 16px; }
+.hero-sub { max-width: 600px; margin: 0 auto 30px; font-weight: 300; font-size: 1.1rem; opacity: .95; }
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Boutons ---------- */
+.btn { display: inline-block; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: .95rem; transition: transform .15s ease, box-shadow .15s ease; }
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-primary { background: var(--gold); color: var(--green-900); box-shadow: 0 8px 20px rgba(201,162,39,.35); }
+.btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+.btn-ghost:hover { background: rgba(255,255,255,.1); }
+
+/* ---------- Sections ---------- */
+.section { padding: 78px 0; }
+.section-alt { background: var(--cream-dark); }
+.section-head { max-width: 720px; margin-bottom: 44px; }
+.eyebrow { display: inline-block; color: var(--gold); font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+.section-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--green-900); }
+.section-intro { margin-top: 12px; color: var(--muted); }
+
+/* ---------- Présentation ---------- */
+.about-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: start; }
+.about-text p { margin-bottom: 16px; color: #33403a; }
+.feature-list { list-style: none; margin-top: 22px; display: grid; gap: 12px; }
+.feature-list li { position: relative; padding-left: 30px; color: #33403a; }
+.feature-list li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+
+.about-stats { display: grid; gap: 16px; }
+.stat { background: var(--white); border: 1px solid var(--cream-dark); border-radius: var(--radius); padding: 22px; text-align: center; box-shadow: var(--shadow); }
+.stat-num { display: block; font-size: 1.5rem; font-weight: 700; color: var(--green-700); }
+.stat-label { color: var(--muted); font-size: .9rem; }
+
+/* ---------- Galerie du projet ---------- */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.gallery-item { margin: 0; background: var(--white); border: 1px solid var(--cream-dark); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .18s ease; }
+.gallery-item:hover { transform: translateY(-4px); }
+.gallery-wide { grid-column: 1 / -1; }
+.gallery-item img { width: 100%; height: 320px; object-fit: cover; display: block; cursor: zoom-in; background: var(--cream-dark); }
+.gallery-wide img { height: 420px; object-fit: cover; }
+/* Les plans techniques : on montre tout (pas de recadrage) */
+.gallery-item:nth-child(4) img,
+.gallery-item:nth-child(5) img { object-fit: contain; padding: 10px; }
+.gallery-item figcaption { padding: 14px 18px; font-weight: 500; color: var(--green-900); font-size: .95rem; }
+
+/* ---------- Lightbox ---------- */
+.lightbox { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(12, 38, 28, .92); padding: 30px; cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 95%; max-height: 92%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.lightbox-close { position: absolute; top: 20px; right: 28px; background: none; border: 0; color: #fff; font-size: 2.4rem; line-height: 1; cursor: pointer; }
+
+/* ---------- Cartes événements ---------- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card {
+  background: var(--white); border: 1px solid var(--cream-dark);
+  border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow);
+  transition: transform .18s ease;
+}
+.card:hover { transform: translateY(-4px); }
+.card-date { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; min-width: 58px; padding: 8px; border-radius: 10px; background: var(--green-900); color: #fff; margin-bottom: 16px; }
+.card-date .d { font-size: 1.2rem; font-weight: 700; line-height: 1; }
+.card-date .m { font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.card h3 { color: var(--green-900); margin-bottom: 8px; font-size: 1.15rem; }
+.card p { color: var(--muted); font-size: .95rem; }
+.note { margin-top: 28px; color: var(--muted); font-size: .95rem; }
+
+/* ---------- Dons ---------- */
+.donate { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
+.donate-text h2 { color: var(--green-900); margin-bottom: 14px; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+.donate-text p { color: #33403a; }
+.hadith { margin-top: 20px; padding: 14px 20px; border-left: 4px solid var(--gold); background: var(--cream-dark); border-radius: 0 10px 10px 0; font-family: 'Amiri', serif; font-size: 1.15rem; color: var(--green-900); }
+.donate-card { background: var(--green-900); color: #fff; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+.donate-card h3 { color: var(--gold); margin-bottom: 18px; }
+.donate-list { list-style: none; display: grid; gap: 18px; }
+.donate-list li { padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.12); font-size: .95rem; line-height: 1.5; }
+.donate-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.donate-list strong { color: #fff; }
+.donate-foot { margin-top: 18px; font-size: .9rem; opacity: .85; }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: stretch; }
+.contact-list { list-style: none; display: grid; gap: 24px; }
+.contact-list li { display: flex; gap: 16px; align-items: flex-start; }
+.ci-icon { font-size: 1.4rem; }
+.contact-list a { color: var(--green-700); }
+.contact-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--cream-dark); display: flex; flex-direction: column; }
+.contact-map iframe { width: 100%; height: 320px; border: 0; display: block; }
+.map-link { padding: 12px; text-align: center; background: var(--white); font-size: .9rem; font-weight: 500; }
+
+/* ---------- Pied de page ---------- */
+.site-footer { background: var(--green-900); color: #e8efea; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; padding: 50px 22px 34px; }
+.footer-logo { display: block; width: 170px; height: auto; background: var(--cream); padding: 14px 18px; border-radius: 12px; }
+.footer-brand p { margin-top: 14px; color: #b9c9c1; font-size: .9rem; max-width: 320px; }
+.footer-nav, .footer-social { display: flex; flex-direction: column; gap: 10px; }
+.footer-nav a, .footer-social a { color: #c5d4cd; font-size: .92rem; }
+.footer-nav a:hover, .footer-social a:hover { color: var(--gold); text-decoration: none; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); text-align: center; padding: 18px; }
+.footer-bottom p { color: #9fb1a9; font-size: .85rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute; top: 70px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--cream); border-bottom: 1px solid var(--cream-dark);
+    max-height: 0; overflow: hidden; transition: max-height .3s ease;
+  }
+  .nav-links.open { max-height: 320px; }
+  .nav-links a { padding: 14px 22px; border-top: 1px solid var(--cream-dark); }
+
+  .about-grid, .donate, .contact-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr; }
+  .gallery-item img, .gallery-wide img { height: 240px; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
