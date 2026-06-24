@@ -1,7 +1,11 @@
-# Site vitrine — Mosquée de Ganges (ASCG)
+# Site vitrine — Centre Socioculturel de Ganges (ASCG)
 
-Site web statique (HTML/CSS) pour présenter l'association **ASCG** et le projet de
-construction de la nouvelle mosquée de Ganges.
+Site web statique (HTML/CSS) pour présenter l'**Association Socioculturelle du Canton
+de Ganges (ASCG)** et le projet de construction de son futur **centre socioculturel**.
+
+> Note : pour les démarches administratives, le projet est présenté comme un **centre
+> socioculturel** (et non une mosquée), conformément aux statuts de l'association.
+> Le bâtiment inclut notamment un espace de prière parmi ses activités.
 
 ## Structure
 
@@ -26,7 +30,7 @@ Double-cliquez simplement sur `index.html`, il s'ouvre dans le navigateur.
 Cherchez `[À COMPLÉTER]` dans `index.html` et remplacez par les vraies infos restantes :
 
 - **Présentation** : histoire de l'ASCG, année de création, chiffres.
-- **Événements** : remplacez les exemples par vos vrais événements (ou supprimez les cartes).
+- **Activités** : remplacez les exemples par vos vraies activités (ou supprimez les cartes).
 - **Dons** : **IBAN** et lien de don en ligne (HelloAsso…). Le bénéficiaire est déjà rempli.
 - **Réseaux sociaux** : liens Facebook / Instagram dans le pied de page (WhatsApp déjà branché).
 

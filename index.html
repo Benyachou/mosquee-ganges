@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosquée de Ganges — ASCG</title>
-  <meta name="description" content="Site officiel de l'ASCG, association de la mosquée de Ganges. Découvrez le projet de construction de la nouvelle mosquée, nos événements et comment soutenir le projet." />
+  <title>Centre Socioculturel de Ganges — ASCG</title>
+  <meta name="description" content="Projet du futur centre socioculturel de Ganges, porté par l'Association Socioculturelle du Canton de Ganges (ASCG) : culture, éducation, solidarité et espace de prière." />
 
   <!-- Open Graph (aperçu lors du partage sur les réseaux / WhatsApp) -->
-  <meta property="og:title" content="Mosquée de Ganges — ASCG" />
-  <meta property="og:description" content="Projet de construction de la nouvelle mosquée de Ganges. Soutenez l'ASCG." />
+  <meta property="og:title" content="Centre Socioculturel de Ganges — ASCG" />
+  <meta property="og:description" content="Découvrez le projet du futur centre socioculturel de Ganges et soutenez l'ASCG." />
   <meta property="og:image" content="assets/perspective-3d.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Amiri:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Barre de progression de lecture -->
+  <div class="scroll-progress" id="progress"></div>
 
   <!-- ====================== EN-TÊTE / NAVIGATION ====================== -->
   <header class="site-header" id="top">
@@ -26,7 +29,7 @@
       <a href="#top" class="brand">
         <img class="brand-logo" src="assets/logo-emblem.png" alt="Logo ASCG" />
         <span class="brand-text">
-          <strong>Mosquée de Ganges</strong>
+          <strong>Centre Socioculturel de Ganges</strong>
           <small>Association Socioculturelle du Canton de Ganges</small>
         </span>
       </a>
@@ -38,7 +41,7 @@
       <nav class="nav-links">
         <a href="#projet">Le projet</a>
         <a href="#apropos">Présentation</a>
-        <a href="#evenements">Événements</a>
+        <a href="#activites">Activités</a>
         <a href="#dons">Dons</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -47,100 +50,106 @@
 
   <!-- ====================== HERO ====================== -->
   <section class="hero">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
       <p class="hero-bismillah" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-      <h1>Une nouvelle mosquée pour Ganges</h1>
+      <h1>Un nouveau centre<br />socioculturel pour Ganges</h1>
+      <div class="ornament" aria-hidden="true"><span></span></div>
       <p class="hero-sub">
         L'Association Socioculturelle du Canton de Ganges (ASCG) porte le projet de
-        construction d'une mosquée moderne et accueillante,
-        un lieu de prière, de rencontre et de partage ouvert à toutes et à tous.
+        construction d'un lieu moderne et accueillant : un espace de culture,
+        d'éducation, de rencontre et de partage, ouvert à toutes et à tous.
       </p>
       <div class="hero-actions">
         <a href="#projet" class="btn btn-primary">Découvrir le projet</a>
         <a href="#dons" class="btn btn-ghost">Soutenir le projet</a>
       </div>
     </div>
+    <div class="hero-scroll" aria-hidden="true"><span></span></div>
   </section>
 
   <main>
     <!-- ====================== LE PROJET ====================== -->
     <section id="projet" class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="eyebrow">Notre projet</span>
-          <h2>La future mosquée de Ganges</h2>
+          <h2>Le futur centre de Ganges</h2>
           <p class="section-intro">
-            Voici les plans et perspectives de notre future mosquée, conçue par un
-            architecte. Un projet sérieux, pensé pour offrir un lieu de culte digne
-            et fonctionnel à la communauté.
+            Voici les plans et perspectives de notre futur centre, conçu par un
+            architecte. Un projet sérieux et abouti, pensé pour offrir à la communauté
+            un lieu de vie digne et fonctionnel.
           </p>
         </div>
 
         <!-- Galerie : cliquez sur une image pour l'agrandir -->
         <div class="gallery">
-          <figure class="gallery-item gallery-wide">
-            <img src="assets/perspective-3d.jpg" alt="Perspective 3D de la future mosquée de Ganges" loading="lazy" />
-            <figcaption>Perspective 3D — vue d'angle</figcaption>
+          <figure class="gallery-item gallery-wide reveal">
+            <img src="assets/perspective-3d.jpg" alt="Perspective 3D du futur centre socioculturel de Ganges" loading="lazy" />
+            <figcaption><span class="star" aria-hidden="true"></span>Perspective 3D — vue d'angle</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="assets/insertion-paysagere.jpg" alt="Insertion paysagère de la mosquée dans son environnement" loading="lazy" />
-            <figcaption>Insertion dans le site</figcaption>
+          <figure class="gallery-item reveal">
+            <img src="assets/insertion-paysagere.jpg" alt="Insertion paysagère du centre dans son environnement" loading="lazy" />
+            <figcaption><span class="star" aria-hidden="true"></span>Insertion dans le site</figcaption>
           </figure>
-          <figure class="gallery-item">
+          <figure class="gallery-item reveal">
             <img src="assets/elevation-facade.jpg" alt="Élévation de la façade principale" loading="lazy" />
-            <figcaption>Élévation — façade principale</figcaption>
+            <figcaption><span class="star" aria-hidden="true"></span>Élévation — façade principale</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="assets/plan-rdc.png" alt="Plan du rez-de-chaussée de la mosquée" loading="lazy" />
-            <figcaption>Plan du rez-de-chaussée</figcaption>
+          <figure class="gallery-item reveal">
+            <img src="assets/plan-rdc.png" alt="Plan du rez-de-chaussée" loading="lazy" />
+            <figcaption><span class="star" aria-hidden="true"></span>Plan du rez-de-chaussée</figcaption>
           </figure>
-          <figure class="gallery-item">
+          <figure class="gallery-item reveal">
             <img src="assets/plan-etage.png" alt="Plan de l'étage et de la mezzanine" loading="lazy" />
-            <figcaption>Plan de l'étage (mezzanine)</figcaption>
+            <figcaption><span class="star" aria-hidden="true"></span>Plan de l'étage (mezzanine)</figcaption>
           </figure>
         </div>
 
-        <p class="note">
-          🏗️ Le projet est en cours. <a href="#dons">Votre soutien</a> est essentiel
-          pour le concrétiser, in cha'a Allah.
+        <p class="note reveal">
+          <span class="note-icon" aria-hidden="true">✦</span>
+          Le projet est en cours. <a href="#dons">Votre soutien</a> est essentiel pour
+          le concrétiser, in cha'a Allah.
         </p>
       </div>
     </section>
 
     <!-- ====================== PRÉSENTATION ====================== -->
-    <section id="apropos" class="section">
+    <section id="apropos" class="section section-alt">
+      <div class="section-pattern" aria-hidden="true"></div>
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="eyebrow">Qui sommes-nous</span>
           <h2>Présentation de l'association</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-text">
+          <div class="about-text reveal">
             <!-- [À COMPLÉTER] Remplacez par la vraie présentation de votre association -->
             <p>
-              L'association de la Mosquée de Ganges œuvre depuis [À COMPLÉTER : année]
-              pour offrir aux musulmans de Ganges et des environs un lieu de culte
-              accueillant et un espace de vie communautaire.
+              L'Association Socioculturelle du Canton de Ganges (ASCG) œuvre depuis
+              [À COMPLÉTER : année] pour offrir aux habitants de Ganges et des environs
+              un lieu d'accueil, de culture et de vie communautaire.
             </p>
             <p>
-              Notre mission est de favoriser la pratique religieuse dans la sérénité,
-              de transmettre les valeurs de l'islam fondées sur la paix, le respect
-              et la solidarité, et de tisser des liens fraternels entre les habitants.
+              Notre mission : favoriser l'éducation, la transmission des valeurs de
+              partage, de respect et de solidarité, et tisser des liens fraternels entre
+              les habitants — dans la sérénité et l'ouverture à tous.
             </p>
 
             <ul class="feature-list">
-              <li><strong>Prières quotidiennes</strong> et prière du vendredi (Jumu'a)</li>
-              <li><strong>Cours de Coran</strong> et d'arabe pour enfants et adultes</li>
-              <li><strong>Solidarité</strong> et entraide envers les plus démunis</li>
-              <li><strong>Événements</strong> pendant le Ramadan et les fêtes de l'Aïd</li>
+              <li>Cours d'arabe, de Coran et soutien scolaire</li>
+              <li>Activités culturelles et éducatives pour tous les âges</li>
+              <li>Actions de solidarité et d'entraide</li>
+              <li>Espace de prière et de recueillement</li>
             </ul>
           </div>
 
-          <aside class="about-stats">
+          <aside class="about-stats reveal">
             <div class="stat">
               <span class="stat-num">[À COMPLÉTER]</span>
-              <span class="stat-label">Fidèles accueillis</span>
+              <span class="stat-label">Adhérents</span>
             </div>
             <div class="stat">
               <span class="stat-num">[À COMPLÉTER]</span>
@@ -155,68 +164,72 @@
       </div>
     </section>
 
-    <!-- ====================== ÉVÉNEMENTS & ANNONCES ====================== -->
-    <section id="evenements" class="section section-alt">
+    <!-- ====================== ACTIVITÉS & ANNONCES ====================== -->
+    <section id="activites" class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Vie de la mosquée</span>
-          <h2>Événements & annonces</h2>
+        <div class="section-head reveal">
+          <span class="eyebrow">Vie de l'association</span>
+          <h2>Activités & annonces</h2>
           <p class="section-intro">
-            Retrouvez ici nos prochains rendez-vous et les annonces importantes
-            de la communauté.
+            Retrouvez ici nos prochains rendez-vous et les annonces importantes de la
+            communauté.
           </p>
         </div>
 
         <div class="cards">
-          <!-- [À COMPLÉTER] Dupliquez un bloc "article.card" pour ajouter un événement -->
-          <article class="card">
-            <div class="card-date"><span class="d">—</span><span class="m">À VENIR</span></div>
-            <h3>Cours de Coran</h3>
-            <p>[À COMPLÉTER] Décrivez l'événement : jours, horaires, public concerné.</p>
+          <!-- [À COMPLÉTER] Dupliquez un bloc "article.card" pour ajouter une activité -->
+          <article class="card reveal">
+            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
+            <h3>Cours d'arabe & de Coran</h3>
+            <p>[À COMPLÉTER] Jours, horaires et public concerné (enfants, adultes).</p>
           </article>
 
-          <article class="card">
-            <div class="card-date"><span class="d">—</span><span class="m">À VENIR</span></div>
-            <h3>Conférence / Causerie</h3>
-            <p>[À COMPLÉTER] Thème, intervenant, date et lieu.</p>
+          <article class="card reveal">
+            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
+            <h3>Soutien scolaire</h3>
+            <p>[À COMPLÉTER] Niveaux, matières, horaires d'accompagnement.</p>
           </article>
 
-          <article class="card">
-            <div class="card-date"><span class="d">—</span><span class="m">À VENIR</span></div>
+          <article class="card reveal">
+            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
             <h3>Collecte de solidarité</h3>
             <p>[À COMPLÉTER] Objectif de la collecte et modalités de participation.</p>
           </article>
         </div>
 
-        <p class="note">
-          📢 Pour les annonces de dernière minute, suivez-nous sur nos réseaux
+        <p class="note reveal">
+          <span class="note-icon" aria-hidden="true">✦</span>
+          Pour les annonces de dernière minute, suivez-nous sur nos réseaux
           (voir le bas de page).
         </p>
       </div>
     </section>
 
     <!-- ====================== DONS ====================== -->
-    <section id="dons" class="section">
+    <section id="dons" class="section section-alt">
+      <div class="section-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="donate">
-          <div class="donate-text">
-            <span class="eyebrow">Soutenez la mosquée</span>
-            <h2>Faire un don (Sadaqa)</h2>
+          <div class="donate-text reveal">
+            <span class="eyebrow">Soutenez le centre</span>
+            <h2>Faire un don</h2>
             <p>
-              La mosquée vit grâce à la générosité des fidèles. Chaque don, petit ou grand,
-              contribue à l'entretien du lieu, aux activités et aux actions de solidarité.
+              Le centre vit grâce à la générosité de chacun. Chaque don, petit ou grand,
+              contribue à la construction, à l'entretien du lieu, aux activités et aux
+              actions de solidarité.
             </p>
             <blockquote class="hadith">
               « La charité n'a jamais diminué une fortune. »
             </blockquote>
           </div>
 
-          <div class="donate-card">
+          <div class="donate-card reveal">
+            <div class="donate-pattern" aria-hidden="true"></div>
             <h3>Comment donner</h3>
             <ul class="donate-list">
               <li>
                 <strong>Sur place</strong><br />
-                Urne de dons à la mosquée pendant les prières.
+                Urne de dons au centre, aux horaires d'ouverture.
               </li>
               <li>
                 <strong>Par virement</strong><br />
@@ -237,15 +250,15 @@
     </section>
 
     <!-- ====================== CONTACT ====================== -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="eyebrow">Nous trouver</span>
           <h2>Contact & accès</h2>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-info">
+          <div class="contact-info reveal">
             <ul class="contact-list">
               <li>
                 <span class="ci-icon" aria-hidden="true">📍</span>
@@ -271,10 +284,10 @@
             </ul>
           </div>
 
-          <!-- Carte OpenStreetMap (gratuite, sans clé API). Centrée sur Ganges. -->
-          <div class="contact-map">
+          <!-- Carte OpenStreetMap (gratuite, sans clé API). Centrée sur l'adresse. -->
+          <div class="contact-map reveal">
             <iframe
-              title="Localisation de la mosquée de Ganges — 4 Rue des Soyeux"
+              title="Localisation du centre — 4 Rue des Soyeux, Ganges"
               src="https://www.openstreetmap.org/export/embed.html?bbox=3.7006%2C43.9313%2C3.7126%2C43.9393&layer=mapnik&marker=43.9353%2C3.7066"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
@@ -290,21 +303,24 @@
 
   <!-- ====================== PIED DE PAGE ====================== -->
   <footer class="site-footer">
+    <div class="footer-pattern" aria-hidden="true"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
         <img class="footer-logo" src="assets/logo-ascg.png" alt="Logo Association Socioculturelle du Canton de Ganges" />
-        <p>Mosquée de Ganges — un lieu de prière et de partage, ouvert à toutes et à tous.</p>
+        <p>Centre socioculturel de Ganges — un lieu de culture, d'éducation et de partage, ouvert à toutes et à tous.</p>
       </div>
 
       <nav class="footer-nav">
+        <span class="footer-title">Navigation</span>
         <a href="#projet">Le projet</a>
         <a href="#apropos">Présentation</a>
-        <a href="#evenements">Événements</a>
+        <a href="#activites">Activités</a>
         <a href="#dons">Dons</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="footer-social">
+        <span class="footer-title">Suivez-nous</span>
         <!-- [À COMPLÉTER] Ajoutez vos liens Facebook / Instagram, ou supprimez-les -->
         <a href="#" aria-label="Facebook">Facebook</a>
         <a href="#" aria-label="Instagram">Instagram</a>
@@ -312,7 +328,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Mosquée de Ganges. Tous droits réservés.</p>
+      <p>© <span id="year"></span> Association Socioculturelle du Canton de Ganges. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -323,7 +339,7 @@
   </div>
 
   <script>
-    // Année automatique dans le pied de page
+    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Menu mobile
@@ -333,7 +349,6 @@
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
-    // Referme le menu après un clic sur un lien
     links.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => {
         links.classList.remove('open');
@@ -341,15 +356,33 @@
       })
     );
 
+    // En-tête : ombre au défilement + barre de progression
+    const header = document.querySelector('.site-header');
+    const progress = document.getElementById('progress');
+    function onScroll() {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 20);
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Apparition au défilement (reveal)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
     // Lightbox : agrandir les images de la galerie
     const lb = document.getElementById('lightbox');
     const lbImg = lb.querySelector('img');
     document.querySelectorAll('.gallery-item img').forEach(img =>
       img.addEventListener('click', () => {
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        lb.classList.add('open');
-        lb.setAttribute('aria-hidden', false);
+        lbImg.src = img.src; lbImg.alt = img.alt;
+        lb.classList.add('open'); lb.setAttribute('aria-hidden', false);
       })
     );
     function closeLb() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', true); }
