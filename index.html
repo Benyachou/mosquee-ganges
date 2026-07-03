@@ -4,29 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centre Socioculturel de Ganges — ASCG</title>
-  <meta name="description" content="Projet du futur centre socioculturel de Ganges, porté par l'Association Socioculturelle du Canton de Ganges (ASCG) : culture, éducation, solidarité et espace de prière." />
+  <meta name="description" content="L'ASCG bâtit le futur centre socioculturel de Ganges : culture, éducation, solidarité et partage. Découvrez le projet et offrez votre pierre à l'édifice." />
 
   <!-- Open Graph (aperçu lors du partage sur les réseaux / WhatsApp) -->
   <meta property="og:title" content="Centre Socioculturel de Ganges — ASCG" />
-  <meta property="og:description" content="Découvrez le projet du futur centre socioculturel de Ganges et soutenez l'ASCG." />
-  <meta property="og:image" content="assets/perspective-3d.jpg" />
+  <meta property="og:description" content="Bâtissons ensemble un lieu de culture, d'éducation et de partage à Ganges. Chaque pierre compte." />
+  <meta property="og:image" content="https://benyachou.github.io/mosquee-ganges/assets/perspective-3d.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
 
+  <link rel="icon" type="image/png" href="assets/logo-emblem.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Amiri:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Amiri:ital,wght@0,400;0,700&family=Mulish:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Barre de progression de lecture -->
   <div class="scroll-progress" id="progress"></div>
 
-  <!-- ====================== EN-TÊTE / NAVIGATION ====================== -->
-  <header class="site-header" id="top">
+  <!-- ====================== EN-TÊTE ====================== -->
+  <header class="site-header">
     <div class="container nav-bar">
-      <a href="#top" class="brand">
+      <a href="index.html" class="brand">
         <img class="brand-logo" src="assets/logo-emblem.png" alt="Logo ASCG" />
         <span class="brand-text">
           <strong>Centre Socioculturel de Ganges</strong>
@@ -39,263 +39,243 @@
       </button>
 
       <nav class="nav-links">
-        <a href="#projet">Le projet</a>
-        <a href="#apropos">Présentation</a>
-        <a href="#activites">Activités</a>
-        <a href="#dons">Dons</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="projet.html">Le projet</a>
+        <a href="activites.html">Activités</a>
+        <a href="contact.html">Contact</a>
+        <a href="dons.html" class="nav-cta">Faire un don</a>
       </nav>
     </div>
   </header>
 
-  <!-- ====================== HERO ====================== -->
-  <section class="hero">
+  <!-- ====================== HÉROS ====================== -->
+  <section class="hero grain">
+    <div class="hero-bg" style="background-image:url('assets/perspective-3d.jpg')" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-pattern" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
+
     <div class="container hero-inner">
-      <p class="hero-bismillah" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-      <h1>Un nouveau centre<br />socioculturel pour Ganges</h1>
-      <div class="ornament" aria-hidden="true"><span></span></div>
-      <p class="hero-sub">
-        L'Association Socioculturelle du Canton de Ganges (ASCG) porte le projet de
-        construction d'un lieu moderne et accueillant : un espace de culture,
-        d'éducation, de rencontre et de partage, ouvert à toutes et à tous.
+      <p class="hero-bismillah" lang="ar" data-rise style="--i:0">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <h1 data-rise style="--i:1">Bâtissons ensemble<span class="accent">un lieu de partage</span></h1>
+      <div class="ornament" data-rise style="--i:2" aria-hidden="true"><span></span></div>
+      <p class="hero-sub" data-rise style="--i:3">
+        À Ganges, l'ASCG construit bien plus qu'un bâtiment : un centre socioculturel
+        ouvert à toutes et à tous, où grandiront la culture, l'éducation des enfants,
+        la solidarité et le lien entre les habitants.
       </p>
-      <div class="hero-actions">
-        <a href="#projet" class="btn btn-primary">Découvrir le projet</a>
-        <a href="#dons" class="btn btn-ghost">Soutenir le projet</a>
+      <div class="hero-actions" data-rise style="--i:4">
+        <a data-collecte="url" href="#" target="_blank" rel="noopener" class="btn btn-gold">Offrir une pierre</a>
+        <a href="projet.html" class="btn btn-ghost">Découvrir le projet</a>
       </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true"><span></span></div>
+
+    <!-- Bandeau de collecte -->
+    <div class="hero-collect">
+      <div class="container">
+        <div class="collect-strip">
+          <div class="cs-item">
+            <span class="cs-num" data-collecte="collecte">0 €</span>
+            <span class="cs-label">Déjà collectés</span>
+          </div>
+          <div class="cs-item">
+            <span class="cs-num" data-collecte="objectif">0 €</span>
+            <span class="cs-label">Objectif</span>
+          </div>
+          <div class="cs-item">
+            <span class="cs-num" data-collecte="donateurs">0</span>
+            <span class="cs-label">Donateurs</span>
+          </div>
+          <div class="cs-cta">
+            <a href="dons.html" class="btn btn-gold">Participer</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <main>
-    <!-- ====================== LE PROJET ====================== -->
-    <section id="projet" class="section">
+    <!-- ====================== INTRO ÉDITORIALE + PILIERS ====================== -->
+    <section class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Notre projet</span>
-          <h2>Le futur centre de Ganges</h2>
-          <p class="section-intro">
-            Voici les plans et perspectives de notre futur centre, conçu par un
-            architecte. Un projet sérieux et abouti, pensé pour offrir à la communauté
-            un lieu de vie digne et fonctionnel.
+        <div class="section-head center reveal">
+          <span class="eyebrow">Notre vocation</span>
+          <h2>Un lieu pour tous, porté par tous</h2>
+          <p class="editorial">
+            Un centre n'est pas fait de pierres, mais des <em>personnes</em> qui s'y
+            retrouvent. Voici les quatre piliers qui guideront la vie du futur centre.
           </p>
         </div>
 
-        <!-- Galerie : cliquez sur une image pour l'agrandir -->
-        <div class="gallery">
-          <figure class="gallery-item gallery-wide reveal">
-            <img src="assets/perspective-3d.jpg" alt="Perspective 3D du futur centre socioculturel de Ganges" loading="lazy" />
-            <figcaption><span class="star" aria-hidden="true"></span>Perspective 3D — vue d'angle</figcaption>
-          </figure>
-          <figure class="gallery-item reveal">
-            <img src="assets/insertion-paysagere.jpg" alt="Insertion paysagère du centre dans son environnement" loading="lazy" />
-            <figcaption><span class="star" aria-hidden="true"></span>Insertion dans le site</figcaption>
-          </figure>
-          <figure class="gallery-item reveal">
-            <img src="assets/elevation-facade.jpg" alt="Élévation de la façade principale" loading="lazy" />
-            <figcaption><span class="star" aria-hidden="true"></span>Élévation — façade principale</figcaption>
-          </figure>
-          <figure class="gallery-item reveal">
-            <img src="assets/plan-rdc.png" alt="Plan du rez-de-chaussée" loading="lazy" />
-            <figcaption><span class="star" aria-hidden="true"></span>Plan du rez-de-chaussée</figcaption>
-          </figure>
-          <figure class="gallery-item reveal">
-            <img src="assets/plan-etage.png" alt="Plan de l'étage et de la mezzanine" loading="lazy" />
-            <figcaption><span class="star" aria-hidden="true"></span>Plan de l'étage (mezzanine)</figcaption>
-          </figure>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="p-num">١</span>
+            <div class="p-icon">📖</div>
+            <h3>Éducation</h3>
+            <p>Cours d'arabe, apprentissage du Coran et soutien scolaire pour les enfants comme pour les adultes.</p>
+          </article>
+          <article class="pillar reveal" data-delay="1">
+            <span class="p-num">٢</span>
+            <div class="p-icon">🎭</div>
+            <h3>Culture</h3>
+            <p>Ateliers, conférences et événements pour transmettre, découvrir et faire vivre notre patrimoine commun.</p>
+          </article>
+          <article class="pillar reveal" data-delay="2">
+            <span class="p-num">٣</span>
+            <div class="p-icon">🤝</div>
+            <h3>Solidarité</h3>
+            <p>Collectes, entraide et actions de proximité au service des habitants du canton de Ganges.</p>
+          </article>
+          <article class="pillar reveal" data-delay="3">
+            <span class="p-num">٤</span>
+            <div class="p-icon">🕊️</div>
+            <h3>Spiritualité</h3>
+            <p>Un espace de prière et de recueillement, dans la sérénité et le respect de chacun.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CARROUSEL DU PROJET ====================== -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Le futur centre</span>
+          <h2>Un projet d'architecte, pensé pour durer</h2>
+          <p class="section-intro">
+            Perspectives, plans et insertion paysagère : parcourez les visuels du futur
+            centre socioculturel, conçu par un cabinet d'architecture.
+          </p>
+        </div>
+
+        <div class="carousel reveal" aria-label="Visuels du projet">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="assets/perspective-3d.jpg" alt="Perspective 3D du futur centre socioculturel de Ganges" />
+                <div class="carousel-caption">Perspective 3D — vue d'angle</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/insertion-paysagere.jpg" alt="Insertion paysagère du centre dans son environnement" />
+                <div class="carousel-caption">Insertion dans le paysage gangeois</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/elevation-facade.jpg" alt="Élévation de la façade principale" />
+                <div class="carousel-caption">Élévation — façade principale</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/plan-rdc.png" alt="Plan du rez-de-chaussée" />
+                <div class="carousel-caption">Plan du rez-de-chaussée</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="assets/plan-etage.png" alt="Plan de l'étage et de la mezzanine" />
+                <div class="carousel-caption">Plan de l'étage — mezzanine</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <div class="carousel-dots" role="tablist"></div>
+            <div class="carousel-arrows">
+              <button data-prev aria-label="Visuel précédent">←</button>
+              <button data-next aria-label="Visuel suivant">→</button>
+            </div>
+          </div>
         </div>
 
         <p class="note reveal">
           <span class="note-icon" aria-hidden="true">✦</span>
-          Le projet est en cours. <a href="#dons">Votre soutien</a> est essentiel pour
-          le concrétiser, in cha'a Allah.
+          Envie d'en voir plus ? <a href="projet.html">Découvrez le projet en détail</a> :
+          plans, étapes et ambition.
         </p>
       </div>
     </section>
 
-    <!-- ====================== PRÉSENTATION ====================== -->
-    <section id="apropos" class="section section-alt">
+    <!-- ====================== UNE PIERRE POUR NOTRE CENTRE ====================== -->
+    <section class="section section-dark grain">
       <div class="section-pattern" aria-hidden="true"></div>
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Qui sommes-nous</span>
-          <h2>Présentation de l'association</h2>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <!-- [À COMPLÉTER] Remplacez par la vraie présentation de votre association -->
-            <p>
-              L'Association Socioculturelle du Canton de Ganges (ASCG) œuvre depuis
-              [À COMPLÉTER : année] pour offrir aux habitants de Ganges et des environs
-              un lieu d'accueil, de culture et de vie communautaire.
-            </p>
-            <p>
-              Notre mission : favoriser l'éducation, la transmission des valeurs de
-              partage, de respect et de solidarité, et tisser des liens fraternels entre
-              les habitants — dans la sérénité et l'ouverture à tous.
+        <div class="stone-grid">
+          <div class="reveal">
+            <span class="eyebrow">La collecte</span>
+            <h2>Une pierre pour notre centre</h2>
+            <p class="section-intro">
+              Ce centre sera construit pierre par pierre, don par don. Chaque
+              contribution, même modeste, devient une part durable de l'édifice —
+              et une trace de votre générosité pour les générations à venir.
             </p>
 
-            <ul class="feature-list">
-              <li>Cours d'arabe, de Coran et soutien scolaire</li>
-              <li>Activités culturelles et éducatives pour tous les âges</li>
-              <li>Actions de solidarité et d'entraide</li>
-              <li>Espace de prière et de recueillement</li>
-            </ul>
+            <blockquote class="hadith">
+              « La charité n'a jamais diminué une fortune. »
+              <cite>— Hadith rapporté par Mouslim</cite>
+            </blockquote>
+
+            <div class="gauge">
+              <div class="gauge-bar"><div class="gauge-fill"></div></div>
+              <div class="gauge-legend">
+                <span><strong data-collecte="collecte">0 €</strong> collectés</span>
+                <span>Objectif : <strong data-collecte="objectif">0 €</strong></span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a data-collecte="url" href="#" target="_blank" rel="noopener" class="btn btn-gold">Je donne maintenant</a>
+              <a href="dons.html" class="btn btn-ghost">Toutes les façons de donner</a>
+            </div>
           </div>
 
-          <aside class="about-stats reveal">
-            <div class="stat">
-              <span class="stat-num">[À COMPLÉTER]</span>
-              <span class="stat-label">Adhérents</span>
+          <div class="stone-visual reveal" data-delay="1">
+            <img src="assets/insertion-paysagere.jpg" alt="Le futur centre inséré dans le paysage de Ganges" />
+            <div class="stone-badge">
+              <strong data-collecte="donateurs">0</strong>
+              <small>donateurs déjà engagés</small>
             </div>
-            <div class="stat">
-              <span class="stat-num">[À COMPLÉTER]</span>
-              <span class="stat-label">Année de création</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">100%</span>
-              <span class="stat-label">Association à but non lucratif</span>
-            </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== ACTIVITÉS & ANNONCES ====================== -->
-    <section id="activites" class="section">
+    <!-- ====================== ACTIVITÉS (TEASER) ====================== -->
+    <section class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Vie de l'association</span>
-          <h2>Activités & annonces</h2>
-          <p class="section-intro">
-            Retrouvez ici nos prochains rendez-vous et les annonces importantes de la
-            communauté.
-          </p>
+        <div class="section-head center reveal">
+          <span class="eyebrow">La vie du centre</span>
+          <h2>Des activités pour chaque génération</h2>
         </div>
 
         <div class="cards">
-          <!-- [À COMPLÉTER] Dupliquez un bloc "article.card" pour ajouter une activité -->
           <article class="card reveal">
-            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
-            <h3>Cours d'arabe & de Coran</h3>
-            <p>[À COMPLÉTER] Jours, horaires et public concerné (enfants, adultes).</p>
+            <div class="card-icon" aria-hidden="true">🧒</div>
+            <h3>Pour les enfants</h3>
+            <p>Cours d'arabe, apprentissage du Coran et soutien scolaire : un accompagnement bienveillant pour bien grandir.</p>
+            <a href="activites.html#enfants" class="card-link">Voir les cours enfants</a>
           </article>
-
-          <article class="card reveal">
-            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
-            <h3>Soutien scolaire</h3>
-            <p>[À COMPLÉTER] Niveaux, matières, horaires d'accompagnement.</p>
+          <article class="card reveal" data-delay="1">
+            <div class="card-icon" aria-hidden="true">🧑‍🏫</div>
+            <h3>Pour les adultes</h3>
+            <p>Cours de langue, conférences et ateliers thématiques pour apprendre et transmettre à tout âge.</p>
+            <a href="activites.html#adultes" class="card-link">Voir les activités adultes</a>
           </article>
-
-          <article class="card reveal">
-            <div class="card-date"><span class="d">✦</span><span class="m">À VENIR</span></div>
-            <h3>Collecte de solidarité</h3>
-            <p>[À COMPLÉTER] Objectif de la collecte et modalités de participation.</p>
+          <article class="card reveal" data-delay="2">
+            <div class="card-icon" aria-hidden="true">💛</div>
+            <h3>Solidarité &amp; vie associative</h3>
+            <p>Collectes, entraide de proximité et moments conviviaux qui rassemblent les habitants du canton.</p>
+            <a href="activites.html#solidarite" class="card-link">Voir les actions</a>
           </article>
-        </div>
-
-        <p class="note reveal">
-          <span class="note-icon" aria-hidden="true">✦</span>
-          Pour les annonces de dernière minute, suivez-nous sur nos réseaux
-          (voir le bas de page).
-        </p>
-      </div>
-    </section>
-
-    <!-- ====================== DONS ====================== -->
-    <section id="dons" class="section section-alt">
-      <div class="section-pattern" aria-hidden="true"></div>
-      <div class="container">
-        <div class="donate">
-          <div class="donate-text reveal">
-            <span class="eyebrow">Soutenez le centre</span>
-            <h2>Faire un don</h2>
-            <p>
-              Le centre vit grâce à la générosité de chacun. Chaque don, petit ou grand,
-              contribue à la construction, à l'entretien du lieu, aux activités et aux
-              actions de solidarité.
-            </p>
-            <blockquote class="hadith">
-              « La charité n'a jamais diminué une fortune. »
-            </blockquote>
-          </div>
-
-          <div class="donate-card reveal">
-            <div class="donate-pattern" aria-hidden="true"></div>
-            <h3>Comment donner</h3>
-            <ul class="donate-list">
-              <li>
-                <strong>Sur place</strong><br />
-                Urne de dons au centre, aux horaires d'ouverture.
-              </li>
-              <li>
-                <strong>Par virement</strong><br />
-                IBAN : [À COMPLÉTER]<br />
-                Bénéficiaire : Association Socioculturelle du Canton de Ganges
-              </li>
-              <li>
-                <strong>En ligne</strong><br />
-                [À COMPLÉTER : lien HelloAsso / autre, si disponible]
-              </li>
-            </ul>
-            <p class="donate-foot">
-              Un reçu peut être délivré sur demande. <span aria-hidden="true">🤲</span>
-            </p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== CONTACT ====================== -->
-    <section id="contact" class="section">
+    <!-- ====================== APPEL FINAL ====================== -->
+    <section class="cta-band grain">
+      <div class="hero-pattern" aria-hidden="true"></div>
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Nous trouver</span>
-          <h2>Contact & accès</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <ul class="contact-list">
-              <li>
-                <span class="ci-icon" aria-hidden="true">📍</span>
-                <div>
-                  <strong>Adresse</strong><br />
-                  4 Rue des Soyeux<br />34190 Ganges
-                </div>
-              </li>
-              <li>
-                <span class="ci-icon" aria-hidden="true">✉️</span>
-                <div>
-                  <strong>E-mail</strong><br />
-                  <a href="mailto:ascg.ganges@gmail.com">ascg.ganges@gmail.com</a>
-                </div>
-              </li>
-              <li>
-                <span class="ci-icon" aria-hidden="true">📞</span>
-                <div>
-                  <strong>Téléphone</strong><br />
-                  <a href="tel:+33767773561">07 67 77 35 61</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Carte OpenStreetMap (gratuite, sans clé API). Centrée sur l'adresse. -->
-          <div class="contact-map reveal">
-            <iframe
-              title="Localisation du centre — 4 Rue des Soyeux, Ganges"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=3.7006%2C43.9313%2C3.7126%2C43.9393&layer=mapnik&marker=43.9353%2C3.7066"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <a class="map-link" href="https://www.openstreetmap.org/?mlat=43.9353&mlon=3.7066#map=17/43.9353/3.7066" target="_blank" rel="noopener">
-              Voir en plein écran ↗
-            </a>
-          </div>
+        <div class="reveal">
+          <span class="eyebrow">Rejoignez l'aventure</span>
+          <h2>Votre pierre peut tout changer</h2>
+          <p class="editorial">
+            Déjà <em><span data-collecte="donateurs">0</span> donateurs</em> ont posé la leur.
+            Et si la prochaine était la vôtre ?
+          </p>
+          <a data-collecte="url" href="#" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Faire un don sur CotizUp</a>
         </div>
       </div>
     </section>
@@ -312,11 +292,10 @@
 
       <nav class="footer-nav">
         <span class="footer-title">Navigation</span>
-        <a href="#projet">Le projet</a>
-        <a href="#apropos">Présentation</a>
-        <a href="#activites">Activités</a>
-        <a href="#dons">Dons</a>
-        <a href="#contact">Contact</a>
+        <a href="projet.html">Le projet</a>
+        <a href="activites.html">Activités</a>
+        <a href="dons.html">Faire un don</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="footer-social">
@@ -332,62 +311,13 @@
     </div>
   </footer>
 
-  <!-- Lightbox pour agrandir les plans -->
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" aria-label="Fermer">&times;</button>
     <img src="" alt="" />
   </div>
 
-  <script>
-    // Année automatique
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Menu mobile
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      const open = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    links.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.setAttribute('aria-expanded', false);
-      })
-    );
-
-    // En-tête : ombre au défilement + barre de progression
-    const header = document.querySelector('.site-header');
-    const progress = document.getElementById('progress');
-    function onScroll() {
-      const y = window.scrollY;
-      header.classList.toggle('scrolled', y > 20);
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // Apparition au défilement (reveal)
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Lightbox : agrandir les images de la galerie
-    const lb = document.getElementById('lightbox');
-    const lbImg = lb.querySelector('img');
-    document.querySelectorAll('.gallery-item img').forEach(img =>
-      img.addEventListener('click', () => {
-        lbImg.src = img.src; lbImg.alt = img.alt;
-        lb.classList.add('open'); lb.setAttribute('aria-hidden', false);
-      })
-    );
-    function closeLb() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', true); }
-    lb.addEventListener('click', closeLb);
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
-  </script>
+  <script src="collecte.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
