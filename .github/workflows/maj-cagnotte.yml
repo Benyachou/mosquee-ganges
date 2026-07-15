@@ -23,7 +23,7 @@ jobs:
           # proxy de lecture r.jina.ai, qui renvoie la page en texte.
           md=""
           for essai in 1 2 3; do
-            md=$(curl -sL --fail --max-time 90 "https://r.jina.ai/${URL}") && break
+            md=$(curl -sL --fail --max-time 90 -H "x-no-cache: true" "https://r.jina.ai/${URL}") && break
             echo "Essai ${essai} raté, nouvelle tentative dans 30 s…"
             sleep 30
           done
