@@ -18,12 +18,20 @@ jobs:
         run: |
           set -euo pipefail
           URL="https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee"
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 
-          html=$(curl -sL --fail --max-time 60 -A "$UA" "$URL")
+          # CotizUp (Cloudflare) bloque les IP GitHub : on passe par le
+          # proxy de lecture r.jina.ai, qui renvoie la page en texte.
+          md=""
+          for essai in 1 2 3; do
+            md=$(curl -sL --fail --max-time 90 "https://r.jina.ai/${URL}") && break
+            echo "Essai ${essai} raté, nouvelle tentative dans 30 s…"
+            sleep 30
+          done
 
-          montant=$(grep -oE 'data-current-amount="[0-9]+"' <<<"$html" | head -1 | grep -oE '[0-9]+')
-          donateurs=$(grep -oE 'data-total-donors="[0-9]+"' <<<"$html" | head -1 | grep -oE '[0-9]+')
+          # Formats possibles : "€ 2,385 on €500,000" / "2 385 € sur 500 000 €"
+          # et "Donors (65)" / "Donateurs (65)".
+          montant=$(grep -oiE '€ ?[0-9][0-9,. ]*[0-9]? (on|sur)' <<<"$md" | head -1 | grep -oE '[0-9][0-9,. ]*[0-9]|[0-9]' | head -1 | tr -d ' ,.')
+          donateurs=$(grep -oiE '(Donors|Donateurs) \([0-9]+\)' <<<"$md" | head -1 | grep -oE '[0-9]+')
 
           if [ -z "${montant:-}" ] || [ -z "${donateurs:-}" ]; then
             echo "::error::Impossible d'extraire les chiffres de la page CotizUp (structure changée ou page bloquée)."
