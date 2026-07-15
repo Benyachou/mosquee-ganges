@@ -27,10 +27,13 @@ mosquee-ganges/
 
 ## Mettre à jour les chiffres de la collecte
 
-CotizUp n'a pas d'API publique : les montants affichés sont un instantané.
-Ouvrez `collecte.js`, reportez les chiffres de
-[la cagnotte](https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee)
-(collecté, donateurs, date), puis commit + push. Tout le site se met à jour.
+**C'est automatique.** Une GitHub Action (`.github/workflows/maj-cagnotte.yml`)
+lit la page de [la cagnotte](https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee)
+toutes les 6 heures et met à jour `collecte.js` si les chiffres ont bougé
+(CotizUp n'a pas d'API : le robot lit le HTML public de la page).
+Pour forcer une mise à jour immédiate : onglet *Actions* du dépôt GitHub →
+« MAJ cagnotte CotizUp » → *Run workflow*.
+Seuls `objectif` et `url` se changent encore à la main dans `collecte.js`.
 
 ## Voir le site en local
 

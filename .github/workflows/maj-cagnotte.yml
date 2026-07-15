@@ -1,0 +1,57 @@
+name: MAJ cagnotte CotizUp
+
+on:
+  schedule:
+    - cron: "23 */6 * * *" # toutes les 6 h
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lire la cagnotte et mettre à jour collecte.js
+        run: |
+          set -euo pipefail
+          URL="https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee"
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+          html=$(curl -sL --fail --max-time 60 -A "$UA" "$URL")
+
+          montant=$(grep -oE 'data-current-amount="[0-9]+"' <<<"$html" | head -1 | grep -oE '[0-9]+')
+          donateurs=$(grep -oE 'data-total-donors="[0-9]+"' <<<"$html" | head -1 | grep -oE '[0-9]+')
+
+          if [ -z "${montant:-}" ] || [ -z "${donateurs:-}" ]; then
+            echo "::error::Impossible d'extraire les chiffres de la page CotizUp (structure changée ou page bloquée)."
+            exit 1
+          fi
+          echo "CotizUp : ${montant} € — ${donateurs} donateurs"
+
+          mois=(janvier février mars avril mai juin juillet août septembre octobre novembre décembre)
+          date_fr="$(date -u +%-d) ${mois[$(( $(date -u +%-m) - 1 ))]} $(date -u +%Y)"
+
+          sed -i -E "s/(collecte: )[0-9]+/\1${montant}/" collecte.js
+          sed -i -E "s/(donateurs: )[0-9]+/\1${donateurs}/" collecte.js
+
+          # La date n'est réécrite que si un chiffre a bougé,
+          # pour ne pas créer un commit à chaque exécution.
+          if ! git diff --quiet collecte.js; then
+            sed -i -E "s/(maj: \")[^\"]*/\1${date_fr}/" collecte.js
+          fi
+
+      - name: Commit et push si changement
+        run: |
+          set -euo pipefail
+          if git diff --quiet collecte.js; then
+            echo "Cagnotte inchangée, rien à faire."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add collecte.js
+          git commit -m "MAJ auto cagnotte CotizUp"
+          git push

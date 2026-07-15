@@ -1,12 +1,13 @@
 // ============================================================
-// Chiffres de la cagnotte CotizUp — À METTRE À JOUR ICI
-// (CotizUp n'a pas d'API publique : reporter les montants
-//  affichés sur la page de la cagnotte, puis commit + push.)
+// Chiffres de la cagnotte CotizUp — MIS À JOUR AUTOMATIQUEMENT
+// par .github/workflows/maj-cagnotte.yml (toutes les 6 h).
+// Ne pas éditer collecte/donateurs/maj à la main : le robot
+// écraserait les valeurs. L'objectif et l'URL restent manuels.
 // ============================================================
 window.COLLECTE = {
   url: "https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee",
-  collecte: 2000,      // € déjà collectés
+  collecte: 2385,      // € déjà collectés
   objectif: 500000,    // € objectif
-  donateurs: 57,       // nombre de participants
-  maj: "3 juillet 2026" // date de mise à jour des chiffres
+  donateurs: 65,       // nombre de participants
+  maj: "15 juillet 2026" // date de mise à jour des chiffres
 };
