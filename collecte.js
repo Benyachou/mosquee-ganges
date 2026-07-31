@@ -6,8 +6,8 @@
 // ============================================================
 window.COLLECTE = {
   url: "https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee",
-  collecte: 2940,      // € déjà collectés
+  collecte: 2960,      // € déjà collectés
   objectif: 500000,    // € objectif
-  donateurs: 67,       // nombre de participants
-  maj: "29 juillet 2026" // date de mise à jour des chiffres
+  donateurs: 68,       // nombre de participants
+  maj: "31 juillet 2026" // date de mise à jour des chiffres
 };
