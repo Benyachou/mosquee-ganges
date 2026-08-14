@@ -22,6 +22,9 @@ mosquee-ganges/
 ├── styles.css          → le style (direction « Pierre & Lumière »)
 ├── main.js             → JS partagé (nav, carrousel, onglets, compteurs, lightbox)
 ├── collecte.js         → ⭐ chiffres de la cagnotte — À METTRE À JOUR ICI
+├── 404.html            → page « introuvable » servie par GitHub Pages
+├── robots.txt          → autorise l'indexation + pointe vers le sitemap
+├── sitemap.xml         → liste des pages pour les moteurs de recherche
 └── assets/             → images des plans (extraites du PDF de l'architecte) + logos
 ```
 
@@ -39,14 +42,18 @@ Seuls `objectif` et `url` se changent encore à la main dans `collecte.js`.
 
 Double-cliquez simplement sur `index.html`, il s'ouvre dans le navigateur.
 
-## ⚠️ À compléter
+## ⚠️ À compléter (optionnel — le site est livrable en l'état)
 
-Cherchez `[À COMPLÉTER]` dans les fichiers HTML :
-
-- **Dons** (`dons.html`) : **IBAN** du virement bancaire.
-- **Activités** (`activites.html`) : jours et horaires réels des cours.
-- **Réseaux sociaux** : liens Facebook / Instagram dans les pieds de page
-  (WhatsApp déjà branché).
+- **Dons** (`dons.html`) : le site indique « RIB envoyé sur demande par
+  e-mail ou WhatsApp ». Pour afficher l'IBAN directement, remplacez ce
+  paragraphe dans la carte « Virement ou sur place ».
+- **Activités** (`activites.html`) : jours et horaires réels des cours
+  (« Horaires à venir » s'affiche en attendant) — voir les commentaires
+  `[À COMPLÉTER]` dans le fichier.
+- **Réseaux sociaux** : les liens Facebook / Instagram ont été retirés des
+  pieds de page (aucune page officielle trouvée). Si l'association en crée,
+  rajoutez les liens à côté de WhatsApp dans le bloc `footer-social` des
+  5 pages.
 
 Déjà branchés : cagnotte CotizUp, formulaire de don HelloAsso, nom officiel, logo,
 adresse (4 Rue des Soyeux, 34190 Ganges), e-mail, téléphone, carte, partage WhatsApp.

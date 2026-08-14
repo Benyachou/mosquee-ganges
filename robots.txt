@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benyachou.github.io/mosquee-ganges/sitemap.xml
