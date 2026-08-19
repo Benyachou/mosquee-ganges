@@ -8,7 +8,7 @@ Socioculturelle du Canton de Ganges (ASCG)**, le projet de construction de son f
 > socioculturel** (et non une mosquée), conformément aux statuts de l'association.
 > Le bâtiment inclut notamment un espace de prière parmi ses activités.
 
-En ligne : https://benyachou.github.io/mosquee-ganges/
+En ligne : https://ascg.fr
 
 ## Structure
 

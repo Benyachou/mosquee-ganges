@@ -8,9 +8,13 @@
 
   <meta property="og:title" content="Activités &amp; cours — Centre Socioculturel de Ganges" />
   <meta property="og:description" content="Cours pour enfants, activités adultes et solidarité : la vie du centre socioculturel de Ganges." />
-  <meta property="og:image" content="https://benyachou.github.io/mosquee-ganges/assets/perspective-3d.jpg" />
+  <meta property="og:image" content="https://ascg.fr/assets/perspective-3d.jpg" />
+  <meta property="og:url" content="https://ascg.fr/activites" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
+
+  <link rel="canonical" href="https://ascg.fr/activites" />
+  <meta name="theme-color" content="#0a2e23" />
 
   <link rel="icon" type="image/png" href="assets/logo-emblem.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +29,7 @@
   <!-- ====================== EN-TÊTE ====================== -->
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         <img class="brand-logo" src="assets/logo-emblem.png" alt="Logo ASCG" />
         <span class="brand-text">
           <strong>Centre Socioculturel de Ganges</strong>
@@ -38,11 +42,11 @@
       </button>
 
       <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a href="projet.html">Le projet</a>
-        <a href="activites.html" class="active">Activités</a>
-        <a href="contact.html">Contact</a>
-        <a href="dons.html" class="nav-cta">Faire un don</a>
+        <a href="/">Accueil</a>
+        <a href="/projet">Le projet</a>
+        <a href="/activites" class="active">Activités</a>
+        <a href="/contact">Contact</a>
+        <a href="/dons" class="nav-cta">Faire un don</a>
       </nav>
     </div>
   </header>
@@ -51,7 +55,7 @@
   <section class="page-hero grain">
     <div class="hero-pattern" aria-hidden="true"></div>
     <div class="container">
-      <p class="breadcrumb"><a href="index.html">Accueil</a> · Activités</p>
+      <p class="breadcrumb"><a href="/">Accueil</a> · Activités</p>
       <span class="eyebrow">La vie du centre</span>
       <h1>Apprendre, transmettre, partager</h1>
       <p class="hero-sub">
@@ -67,9 +71,9 @@
 
         <!-- Onglets -->
         <div class="tabs-nav" role="tablist">
-          <button data-tab="enfants" class="active">🧒 Enfants</button>
-          <button data-tab="adultes">🧑‍🏫 Adultes</button>
-          <button data-tab="solidarite">💛 Solidarité &amp; vie associative</button>
+          <button data-tab="enfants" class="active">Enfants</button>
+          <button data-tab="adultes">Adultes</button>
+          <button data-tab="solidarite">Solidarité &amp; vie associative</button>
         </div>
 
         <!-- ============ ONGLET ENFANTS ============ -->
@@ -86,7 +90,7 @@
           <div class="activity-list">
             <!-- [À COMPLÉTER] Renseignez jours, horaires et tranches d'âge -->
             <article class="activity reveal">
-              <div class="a-icon" aria-hidden="true">📖</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a7.8 7.8 0 0 1-11.3 7L4.5 20l1.6-4.9A7.8 7.8 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg></div>
               <div>
                 <h3>Cours d'arabe</h3>
                 <p>Lecture, écriture et expression : apprentissage progressif de la langue arabe, par niveaux.</p>
@@ -94,7 +98,7 @@
               <div class="a-meta">Horaires à venir</div>
             </article>
             <article class="activity reveal" data-delay="1">
-              <div class="a-icon" aria-hidden="true">🕌</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6.2C5.9 5 8.2 5 12 6.6 15.8 5 18.1 5 20 6.2v12.3c-1.9-1.2-4.2-1.2-8 .4-3.8-1.6-6.1-1.6-8-.4V6.2Z"/><path d="M12 6.6v12.3"/></svg></div>
               <div>
                 <h3>Apprentissage du Coran</h3>
                 <p>Mémorisation, récitation et compréhension, dans un cadre serein et encourageant.</p>
@@ -102,7 +106,7 @@
               <div class="a-meta">Horaires à venir</div>
             </article>
             <article class="activity reveal" data-delay="2">
-              <div class="a-icon" aria-hidden="true">✏️</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 20l1.2-4.2L16.6 4.4a2 2 0 0 1 2.9 2.9L8.2 18.8 4 20Z"/><path d="M14.6 6.4l2.9 2.9"/></svg></div>
               <div>
                 <h3>Soutien scolaire</h3>
                 <p>Aide aux devoirs et renforcement dans les matières principales, du primaire au collège.</p>
@@ -114,7 +118,7 @@
           <p class="note">
             <span class="note-icon" aria-hidden="true">✦</span>
             Les inscriptions se font auprès de l'association —
-            <a href="contact.html">contactez-nous</a> pour connaître les modalités
+            <a href="/contact">contactez-nous</a> pour connaître les modalités
             et les prochaines rentrées.
           </p>
         </div>
@@ -133,7 +137,7 @@
           <div class="activity-list">
             <!-- [À COMPLÉTER] Renseignez jours et horaires -->
             <article class="activity reveal">
-              <div class="a-icon" aria-hidden="true">🗣️</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a7.8 7.8 0 0 1-11.3 7L4.5 20l1.6-4.9A7.8 7.8 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg></div>
               <div>
                 <h3>Cours d'arabe pour adultes</h3>
                 <p>Débutants ou confirmés : apprendre à lire, écrire et converser à son rythme.</p>
@@ -141,7 +145,7 @@
               <div class="a-meta">Horaires à venir</div>
             </article>
             <article class="activity reveal" data-delay="1">
-              <div class="a-icon" aria-hidden="true">🎓</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M2.5 9.5 12 5l9.5 4.5L12 14 2.5 9.5Z"/><path d="M6.5 11.6V16c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.4"/><path d="M21 10.5V15"/></svg></div>
               <div>
                 <h3>Conférences &amp; ateliers</h3>
                 <p>Rencontres thématiques autour de l'éducation, de la culture et de la vie de famille.</p>
@@ -149,7 +153,7 @@
               <div class="a-meta">Programme à venir</div>
             </article>
             <article class="activity reveal" data-delay="2">
-              <div class="a-icon" aria-hidden="true">🕊️</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4.5 21v-7.5a7.5 7.5 0 0 1 15 0V21"/><path d="M2.5 21h19"/><path d="M12 6.5V9"/><path d="M12 9.5l1.6 1.6L12 12.7l-1.6-1.6L12 9.5Z"/></svg></div>
               <div>
                 <h3>Espace de prière</h3>
                 <p>Un lieu de recueillement paisible, ouvert dans le respect de chacun.</p>
@@ -173,7 +177,7 @@
           <div class="activity-list">
             <!-- [À COMPLÉTER] Détaillez vos actions réelles -->
             <article class="activity reveal">
-              <div class="a-icon" aria-hidden="true">🧺</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 9.5h16L18.4 20H5.6L4 9.5Z"/><path d="M8.5 9.5 12 4l3.5 5.5"/><path d="M12 13v4"/></svg></div>
               <div>
                 <h3>Collectes solidaires</h3>
                 <p>Denrées, vêtements et fournitures scolaires redistribués aux familles qui en ont besoin.</p>
@@ -181,7 +185,7 @@
               <div class="a-meta">Toute l'année</div>
             </article>
             <article class="activity reveal" data-delay="1">
-              <div class="a-icon" aria-hidden="true">🤝</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20.3S4.7 15.6 2.9 11.2C1.7 8.3 3.6 5.2 6.7 5.2c2 0 3.4 1 5.3 2.9 1.9-1.9 3.3-2.9 5.3-2.9 3.1 0 5 3.1 3.8 6C19.3 15.6 12 20.3 12 20.3Z"/></svg></div>
               <div>
                 <h3>Entraide de proximité</h3>
                 <p>Visites, coups de main et accompagnement des personnes isolées ou en difficulté.</p>
@@ -189,7 +193,7 @@
               <div class="a-meta">Sur demande</div>
             </article>
             <article class="activity reveal" data-delay="2">
-              <div class="a-icon" aria-hidden="true">🎉</div>
+              <div class="a-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M11 4l1.7 4.8L17.5 10.5l-4.8 1.7L11 17l-1.7-4.8L4.5 10.5l4.8-1.7L11 4Z"/><path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8L18 15Z"/></svg></div>
               <div>
                 <h3>Moments conviviaux</h3>
                 <p>Repas partagés, fêtes et rencontres intergénérationnelles qui tissent du lien.</p>
@@ -201,7 +205,7 @@
           <p class="note">
             <span class="note-icon" aria-hidden="true">✦</span>
             Envie de donner un coup de main ? Les bénévoles sont toujours les
-            bienvenus — <a href="contact.html">écrivez-nous</a>.
+            bienvenus — <a href="/contact">écrivez-nous</a>.
           </p>
         </div>
       </div>
@@ -217,7 +221,7 @@
           <p class="editorial">
             Le futur centre offrira à chacune d'elles <em>l'espace qu'elle mérite</em>.
           </p>
-          <a href="dons.html" class="btn btn-gold btn-lg">Soutenir le projet</a>
+          <a href="/dons" class="btn btn-gold btn-lg">Soutenir le projet</a>
         </div>
       </div>
     </section>
@@ -234,10 +238,10 @@
 
       <nav class="footer-nav">
         <span class="footer-title">Navigation</span>
-        <a href="projet.html">Le projet</a>
-        <a href="activites.html">Activités</a>
-        <a href="dons.html">Faire un don</a>
-        <a href="contact.html">Contact</a>
+        <a href="/projet">Le projet</a>
+        <a href="/activites">Activités</a>
+        <a href="/dons">Faire un don</a>
+        <a href="/contact">Contact</a>
       </nav>
 
       <div class="footer-social">

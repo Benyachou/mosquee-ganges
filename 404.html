@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page introuvable — Centre Socioculturel de Ganges</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Mulish:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <meta name="theme-color" content="#0a2e23" />
+  <style>
+    .nf {
+      min-height: 100svh;
+      display: grid; place-items: center;
+      text-align: center;
+      background: var(--night);
+      color: #fff;
+      position: relative; overflow: hidden; isolation: isolate;
+      padding: 2rem;
+    }
+    .nf .hero-pattern { -webkit-mask-image: none; mask-image: none; opacity: .08; }
+    .nf-num {
+      font-family: var(--f-editorial); font-style: italic;
+      font-size: clamp(5rem, 16vw, 9rem); line-height: 1;
+      color: var(--gold);
+    }
+    .nf p { color: rgba(255,255,255,.75); max-width: 34em; margin: 0 auto 2rem; }
+  </style>
+</head>
+<body>
+  <section class="nf">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div>
+      <span class="nf-num">404</span>
+      <h1>Cette page n'existe pas</h1>
+      <p>Le lien que vous avez suivi ne mène nulle part — mais le centre, lui, se construit bel et bien.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="/" class="btn btn-gold">Retour à l'accueil</a>
+        <a href="/dons" class="btn btn-ghost">Faire un don</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

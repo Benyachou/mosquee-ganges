@@ -34,15 +34,22 @@
     );
   }
 
-  // ---------- En-tête + barre de progression ----------
+  // ---------- En-tête + barre de progression + parallaxe du héros ----------
   const header = $(".site-header");
   const progress = $("#progress");
+  const heroBg = $(".hero-bg");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   function onScroll() {
     const y = window.scrollY;
     if (header) header.classList.toggle("scrolled", y > 20);
     if (progress) {
       const h = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
+    }
+    // Parallaxe : la propriété « translate » se compose avec l'animation
+    // de zoom qui anime « transform », sans conflit.
+    if (heroBg && !reduceMotion && y < window.innerHeight) {
+      heroBg.style.translate = "0 " + Math.round(y * 0.22) + "px";
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
