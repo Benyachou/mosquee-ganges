@@ -115,10 +115,12 @@
         el.textContent = C.maj;
       } else if (key === "url") {
         el.href = C.url;
+      } else if (key === "helloasso") {
+        el.href = C.urlHelloAsso;
       } else if (key === "partage") {
         const msg =
           "As-salamou alaykoum ! Soutenez la construction du centre socioculturel de Ganges — chaque pierre compte : " +
-          C.url;
+          "https://ascg.fr/dons";
         el.href = "https://wa.me/?text=" + encodeURIComponent(msg);
       }
     });

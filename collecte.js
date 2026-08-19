@@ -5,6 +5,9 @@
 // écraserait les valeurs. L'objectif et l'URL restent manuels.
 // ============================================================
 window.COLLECTE = {
+  // Moyen de don mis en avant : HelloAsso ne prélève rien à l'association.
+  urlHelloAsso: "https://www.helloasso.com/associations/association-socioculturelle-du-canton-du-ganges-ascg/formulaires/1",
+  // Cagnotte CotizUp : sert de thermomètre public et reste proposée en complément.
   url: "https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee",
   collecte: 2980,      // € déjà collectés
   objectif: 500000,    // € objectif
