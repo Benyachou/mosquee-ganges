@@ -9,8 +9,8 @@ window.COLLECTE = {
   urlHelloAsso: "https://www.helloasso.com/associations/association-socioculturelle-du-canton-du-ganges-ascg/formulaires/1",
   // Cagnotte CotizUp : sert de thermomètre public et reste proposée en complément.
   url: "https://www.cotizup.com/@ascg-ganges/une-pierre-pour-notre-mosquee",
-  collecte: 2980,      // € déjà collectés
+  collecte: 2985,      // € déjà collectés
   objectif: 500000,    // € objectif
-  donateurs: 69,       // nombre de participants
-  maj: "3 août 2026" // date de mise à jour des chiffres
+  donateurs: 70,       // nombre de participants
+  maj: "26 août 2026" // date de mise à jour des chiffres
 };
