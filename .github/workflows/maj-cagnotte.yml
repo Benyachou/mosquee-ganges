@@ -33,9 +33,11 @@ jobs:
           montant=$(grep -oiE '€ ?[0-9][0-9,. ]*[0-9]? (on|sur)' <<<"$md" | head -1 | grep -oE '[0-9][0-9,. ]*[0-9]|[0-9]' | head -1 | tr -d ' ,.')
           donateurs=$(grep -oiE '(Donors|Donateurs) \([0-9]+\)' <<<"$md" | head -1 | grep -oE '[0-9]+')
 
+          # Le relais refuse parfois la demande : on saute ce passage sans
+          # erreur (pas de mail d'échec), le suivant réessaiera dans 6 h.
           if [ -z "${montant:-}" ] || [ -z "${donateurs:-}" ]; then
-            echo "::error::Impossible d'extraire les chiffres de la page CotizUp (structure changée ou page bloquée)."
-            exit 1
+            echo "::warning::Page CotizUp illisible cette fois, on réessaiera au prochain passage."
+            exit 0
           fi
           echo "CotizUp : ${montant} € — ${donateurs} donateurs"
 
