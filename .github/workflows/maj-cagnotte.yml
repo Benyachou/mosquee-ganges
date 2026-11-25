@@ -30,8 +30,8 @@ jobs:
 
           # Formats possibles : "€ 2,385 on €500,000" / "2 385 € sur 500 000 €"
           # et "Donors (65)" / "Donateurs (65)".
-          montant=$(grep -oiE '€ ?[0-9][0-9,. ]*[0-9]? (on|sur)' <<<"$md" | head -1 | grep -oE '[0-9][0-9,. ]*[0-9]|[0-9]' | head -1 | tr -d ' ,.')
-          donateurs=$(grep -oiE '(Donors|Donateurs) \([0-9]+\)' <<<"$md" | head -1 | grep -oE '[0-9]+')
+          montant=$(grep -oiE '€ ?[0-9][0-9,. ]*[0-9]? (on|sur)' <<<"$md" | head -1 | grep -oE '[0-9][0-9,. ]*[0-9]|[0-9]' | head -1 | tr -d ' ,.' || true)
+          donateurs=$(grep -oiE '(Donors|Donateurs) \([0-9]+\)' <<<"$md" | head -1 | grep -oE '[0-9]+' || true)
 
           # Le relais refuse parfois la demande : on saute ce passage sans
           # erreur (pas de mail d'échec), le suivant réessaiera dans 6 h.
